@@ -510,7 +510,7 @@ const BalanceOverview: React.FC<BalanceOverviewProps> = ({
                       ),
                       top: `${incomeWithHeights
                         .slice(0, index)
-                        .reduce((sum, i) => sum + i.percentage, 0)}%`,
+                        .reduce((sum, i) => sum + (i.percentage || 0), 0)}%`,
                     }}
                   />
                 ))}
@@ -566,7 +566,7 @@ const BalanceOverview: React.FC<BalanceOverviewProps> = ({
                       ),
                       top: `${expenditureWithHeights
                         .slice(0, index)
-                        .reduce((sum, i) => sum + i.percentage, 0)}%`,
+                        .reduce((sum, i) => sum + (i.percentage || 0), 0)}%`,
                     }}
                   />
                 ))}
