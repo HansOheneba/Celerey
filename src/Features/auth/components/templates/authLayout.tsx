@@ -53,22 +53,16 @@ const AuthLayout = ({ children }: AuthLayoutProps) => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 text-right rounded-lg p-4">
             <a
-              href="#"
+              href="https://www.celerey.co/"
               className="block text-sm font-helvetica text-gray-700 mb-2 border-b pb-2 hover:text-navy hover:border-navy transition-colors"
             >
-              Tax Calculator
+              About Us
             </a>
             <a
-              href="#"
+              href="https://www.celerey.co/resources"
               className="block text-sm font-helvetica text-gray-700 mb-2 border-b pb-2 hover:text-navy hover:border-navy transition-colors"
             >
-              Goals & Planning
-            </a>
-            <a
-              href="#"
-              className="block text-sm font-helvetica text-gray-700 hover:text-navy transition-colors"
-            >
-              Knowledge Hub
+              Resources
             </a>
           </div>
         )}
@@ -81,7 +75,6 @@ const AuthLayout = ({ children }: AuthLayoutProps) => {
           <span className="text-sm font-helvetica text-gray-500">
             © Celerey 2025
           </span>
-    
         </div>
       </footer>
     </div>
