@@ -88,8 +88,6 @@ export interface BioDataScreenProps {
       year: string;
     };
     citizenship: string;
-    residentCountry: string;
-    dualCitizenship?: string;
   };
   onChange: (value: BioDataScreenProps["value"]) => void;
 
