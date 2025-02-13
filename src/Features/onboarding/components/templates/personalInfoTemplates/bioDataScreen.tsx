@@ -47,6 +47,7 @@ export const BioDataScreen = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Form submitted");
     if (
       value.prefix &&
       value.firstName.trim() &&
@@ -65,6 +66,8 @@ export const BioDataScreen = ({
 
       console.log("Form state updated:", form);
       onContinue();
+    } else {
+      console.log("Form validation failed");
     }
   };
 
@@ -76,9 +79,7 @@ export const BioDataScreen = ({
 
   return (
     <form onSubmit={handleSubmit} className="text-center max-w-xl mx-auto">
-      <h1 className="text-4xl font-cirka mb-6">
-        Tell us a bit about yourself
-      </h1>
+      <h1 className="text-4xl font-cirka mb-6">Tell us a bit about yourself</h1>
       {/* <p className="text-gray-600 mb-8">
         We need your first information as it&apos;s written on your passport or
         any other forms of identification.
