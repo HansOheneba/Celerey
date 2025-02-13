@@ -149,7 +149,7 @@ const EmergencyFundsSection: React.FC<EmergencyFundsSectionProps> = ({
         onClose={() => setIsModalOpen(false)}
         title="What are your emergency fund details?"
         description="Enter your emergency fund details below."
-        sectionNumber={2}
+        // sectionNumber={2}
         sectionTitle="Emergency Funds"
         nextSectionTitle="Retirement"
         isSectionComplete={isComplete}
