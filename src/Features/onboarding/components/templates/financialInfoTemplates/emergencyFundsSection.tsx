@@ -214,7 +214,7 @@ const EmergencyFundsSection: React.FC<EmergencyFundsSectionProps> = ({
           )}
         </div>
 
-        <div className="flex gap-4 mt-4">
+        {/* <div className="flex gap-4 mt-4">
           <Button
             variant="outline"
             onClick={() => setIsModalOpen(false)}
@@ -231,7 +231,7 @@ const EmergencyFundsSection: React.FC<EmergencyFundsSectionProps> = ({
           >
             Continue
           </Button>
-        </div>
+        </div> */}
       </Modal>
     </div>
   )
