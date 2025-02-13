@@ -101,7 +101,7 @@ const SavingsDetailsScreen: React.FC<SavingsDetailsScreenProps> = ({
   return (
     <div className="font-helvetica max-w-xl mx-auto">
       <div className="text-center mb-8 flex flex-col gap-4">
-        <h1 className="text-4xl font-cirka">Contingent Financial details</h1>
+        <h1 className="text-4xl font-cirka">Contingent Financial Details</h1>
         <p className="text-gray-600">
           Fill the different forms that appear from the pop-ups
         </p>

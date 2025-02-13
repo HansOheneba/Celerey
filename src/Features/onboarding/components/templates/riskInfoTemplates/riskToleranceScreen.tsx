@@ -6,22 +6,25 @@ import { OptionCard } from "../../molecules/riskOptionCard";
 
 const OPTIONS: Option[] = [
   {
-    id:0,
+    id: 1,
     key: "low",
-    title: "Low",
-    description: "Investers prioritizing capital preservation over high returns",
+    title: "I prefer stability over surprises",
+    description:
+      "You’d rather have steady, predictable growth, even if it means missing out on big opportunities.",
   },
   {
-    id:2,
+    id: 2,
     key: "medium",
-    title: "Medium",
-    description: "Investers willing to take on more risk for higher returns",
+    title: "I’m open to calculated risks",
+    description:
+      "You’re willing to take some chances for better returns, but you still like a balance between safety and opportunity.",
   },
   {
-    id:2,
+    id: 3,
     key: "high",
-    title: "High",
-    description: "Investers highest highest tolerance for risk, in for highest possible returns",
+    title: "I chase big wins, even if it means big swings",
+    description:
+      "You’re comfortable with volatility and willing to accept significant ups and downs in pursuit of higher rewards.",
   },
 ];
 

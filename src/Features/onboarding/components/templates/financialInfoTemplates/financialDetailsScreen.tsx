@@ -128,7 +128,7 @@ const FinancialDetailsScreen: React.FC<any> = () => {
       <div className="text-center mb-8 flex flex-col gap-4">
         {" "}
         <h1 className="text-4xl font-cirka">
-          Financial details
+          Financial Details
         </h1>
         <p className="text-gray-600">
           Fill the different forms that appear from the pop-ups

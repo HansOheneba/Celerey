@@ -81,7 +81,7 @@ export const SignUpTemplate = () => {
           onClick={handleSignup}
           className="text-navyLight hover:cursor-pointer hover:underline "
         >
-          Signup
+          Signin
         </span>
       </p>
     </div>
