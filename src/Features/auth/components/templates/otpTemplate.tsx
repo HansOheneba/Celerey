@@ -22,6 +22,7 @@ export const OTPTemplate = () => {
     error,
     setError,
     setLoading,
+    sendOTP,
   } = useAuthStore()
   const { getSectionProgress } = useOnboardingStore()
 
@@ -62,6 +63,12 @@ export const OTPTemplate = () => {
 
   const handleOpenEmail = () => {
     window.open('https://mail.google.com', '_blank')
+  }
+
+  const resendOTP = () => {
+    if (user?.email) {
+      sendOTP(user.email)
+    }
   }
 
   return (
@@ -107,7 +114,9 @@ export const OTPTemplate = () => {
         >
           Open Email
         </p>
-        <p className="text-navyLight hover:cursor-pointer">Resend The Code</p>
+        <p onClick={resendOTP} className="text-navyLight hover:cursor-pointer">
+          Resend The Code
+        </p>
       </div>
     </div>
   )

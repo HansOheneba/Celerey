@@ -151,7 +151,7 @@ const SavingsDetailsScreen: React.FC<SavingsDetailsScreenProps> = ({
           className={`flex-1 bg-navy hover:bg-navyLight text-white ${
             !isAllSectionsComplete ? "opacity-50 cursor-not-allowed" : ""
           }`}
-          disabled={!isAllSectionsComplete}
+          disabled={!isAllSectionsComplete || loading}
         >
           {loading && <Spinner className="text-white" />} Continue
         </Button>

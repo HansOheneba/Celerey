@@ -118,9 +118,13 @@ const EmergencyFundsSection: React.FC<EmergencyFundsSectionProps> = ({
   }
 
   const isComplete =
-    inputValue?.emergencyFund?.hasEmergencyFunds !== '' &&
-    inputValue.emergencyFund?.emergencyFundAmount !== '' &&
-    inputValue.emergencyFund?.targetMonths !== ''
+  inputValue.emergencyFund?.hasEmergencyFunds !== undefined &&
+  (inputValue.emergencyFund?.hasEmergencyFunds === "no" ||
+    (inputValue.emergencyFund?.hasEmergencyFunds === "yes" &&
+      inputValue.emergencyFund?.emergencyFundAmount !== "" &&
+      inputValue.emergencyFund?.targetMonths !== "" &&
+      emergencyFundAmountValid &&
+      targetMonthsValid));
 
   return (
     <div className="text-center max-w-xl mx-auto">
@@ -214,24 +218,7 @@ const EmergencyFundsSection: React.FC<EmergencyFundsSectionProps> = ({
           )}
         </div>
 
-        {/* <div className="flex gap-4 mt-4">
-          <Button
-            variant="outline"
-            onClick={() => setIsModalOpen(false)}
-            className="flex-1"
-          >
-            Back
-          </Button>
-          <Button
-            onClick={() => {
-              setIsModalOpen(false)
-            }}
-            className="flex-1 bg-navy hover:bg-navyLight text-white"
-            disabled={!isComplete}
-          >
-            Continue
-          </Button>
-        </div> */}
+        
       </Modal>
     </div>
   )

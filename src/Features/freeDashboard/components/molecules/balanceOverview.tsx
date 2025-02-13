@@ -156,10 +156,10 @@ const BalanceOverview: React.FC<BalanceOverviewProps> = ({
   const incomeData = Object.entries(dummyAnnualIncome).map(([name, value]) => ({
     name,
     value: value?.value || 0,
-  }))
-  const expenditureData = Object.entries(
-    dummyAnnualExpenditure,
-  ).map(([name, value]) => ({ name, value: value?.value || 0, }))
+  }));
+  const expenditureData = Object.entries(dummyAnnualExpenditure).map(
+    ([name, value]) => ({ name, value: value?.value || 0 })
+  );
 
   const incomeColors: Record<IncomeCategory, string> = {
     Dividends: "#4A1D96",

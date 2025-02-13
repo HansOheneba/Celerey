@@ -13,7 +13,7 @@ import { useOnboardingStore } from '@/Features/onboarding/state'
 
 export const SignupOTPTemplate = () => {
   const [otpValues, setOTPValues] = useState(Array(6).fill(''))
-  const { validateOTP, loading, setLoading } = useAuthStore()
+  const { validateOTP, loading, setLoading, sendOTP, user } = useAuthStore()
   const { subscription } = useDashboardStore()
   const { getSectionProgress } = useOnboardingStore()
 
@@ -55,6 +55,12 @@ export const SignupOTPTemplate = () => {
     }
   }
 
+  const resendOTP = () => {
+    if (user?.email) {
+      sendOTP(user.email)
+    }
+  }
+
   return (
     <div className="max-w-md mx-auto text-center">
       <div className="mb-8">
@@ -91,7 +97,9 @@ export const SignupOTPTemplate = () => {
         >
           Open Email
         </p>
-        <p className="text-navyLight hover:cursor-pointer">Resend The Code</p>
+        <p onClick={resendOTP} className="text-navyLight hover:cursor-pointer">
+          Resend The Code
+        </p>
       </div>
     </div>
   )
